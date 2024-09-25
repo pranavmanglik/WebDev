@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-800 flex items-center justify-center h-screen p-4">
+    <div class="relative w-full max-w-md">
+      <h1 class="text-2xl font-bold text-white text-center mb-4">AI Quiz</h1>
+      <div id="quiz-container" class="text-white"></div>
+      <div id="result" class="hidden text-white text-center mt-4"></div>
+    </div>
+    <div
+      id="score-history"
+      class="absolute top-0 right-0 m-4 bg-gray-700 p-4 rounded-lg text-white text-sm w-48 sm:w-64"
+    ></div>
+    <script src="func.js"></script>
+  </body>
+</html>

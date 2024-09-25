@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="bg-slate-950 flex flex-col items-center justify-center h-screen p-4 sm:p-6"
+  >
+    <div
+      class="bg-gray-600 p-6 rounded-lg shadow-lg w-full max-w-xs sm:max-w-md mb-4"
+    >
+      <h1 class="text-3xl font-bold mb-4 text-center text-white">Calculator</h1>
+      <div
+        id="display"
+        class="w-full bg-gray-100 text-right p-4 text-3xl font-mono rounded-lg mb-4"
+      >
+        0
+      </div>
+      <div class="grid grid-cols-4 gap-4 text-center">
+        <button
+          class="bg-gray-300 p-4 rounded-lg text-xl font-bold"
+          onclick="clearDisplay()"
+        >
+          C
+        </button>
+        <button
+          class="bg-gray-300 p-4 rounded-lg text-xl font-bold"
+          onclick="deleteLast()"
+        >
+          Del
+        </button>
+        <button
+          class="bg-gray-300 p-4 rounded-lg text-xl font-bold"
+          onclick="appendOperator('%')"
+        >
+          %
+        </button>
+        <button
+          class="bg-blue-500 text-white p-4 rounded-lg text-xl font-bold"
+          onclick="appendOperator('/')"
+        >
+          ÷
+        </button>
+
+        <button
+          class="bg-gray-300 p-4 rounded-lg text-xl font-bold"
+          onclick="appendNumber('7')"
+        >
+          7
+        </button>
+        <button
+          class="bg-gray-300 p-4 rounded-lg text-xl font-bold"
+          onclick="appendNumber('8')"
+        >
+          8
+        </button>
+        <button
+          class="bg-gray-300 p-4 rounded-lg text-xl font-bold"
+          onclick="appendNumber('9')"
+        >
+          9
+        </button>
+        <button
+          class="bg-blue-500 text-white p-4 rounded-lg text-xl font-bold"
+          onclick="appendOperator('*')"
+        >
+          ×
+        </button>
+
+        <button
+          class="bg-gray-300 p-4 rounded-lg text-xl font-bold"
+          onclick="appendNumber('4')"
+        >
+          4
+        </button>
+        <button
+          class="bg-gray-300 p-4 rounded-lg text-xl font-bold"
+          onclick="appendNumber('5')"
+        >
+          5
+        </button>
+        <button
+          class="bg-gray-300 p-4 rounded-lg text-xl font-bold"
+          onclick="appendNumber('6')"
+        >
+          6
+        </button>
+        <button
+          class="bg-blue-500 text-white p-4 rounded-lg text-xl font-bold"
+          onclick="appendOperator('-')"
+        >
+          −
+        </button>
+
+        <button
+          class="bg-gray-300 p-4 rounded-lg text-xl font-bold"
+          onclick="appendNumber('1')"
+        >
+          1
+        </button>
+        <button
+          class="bg-gray-300 p-4 rounded-lg text-xl font-bold"
+          onclick="appendNumber('2')"
+        >
+          2
+        </button>
+        <button
+          class="bg-gray-300 p-4 rounded-lg text-xl font-bold"
+          onclick="appendNumber('3')"
+        >
+          3
+        </button>
+        <button
+          class="bg-blue-500 text-white p-4 rounded-lg text-xl font-bold"
+          onclick="appendOperator('+')"
+        >
+          +
+        </button>
+
+        <button
+          class="bg-gray-300 p-4 rounded-lg text-xl font-bold col-span-2"
+          onclick="appendNumber('0')"
+        >
+          0
+        </button>
+        <button
+          class="bg-gray-300 p-4 rounded-lg text-xl font-bold"
+          onclick="appendNumber('.')"
+        >
+          .
+        </button>
+        <button
+          class="bg-green-500 text-white p-4 rounded-lg text-xl font-bold"
+          onclick="calculateResult()"
+        >
+          =
+        </button>
+      </div>
+    </div>
+
+    <div
+      id="history"
+      class="bg-gray-200 p-4 rounded-lg text-right text-sm mt-4 w-full max-w-xs sm:max-w-md"
+    >
+      <h2 class="text-lg font-bold text-center mb-2">History</h2>
+      <ul id="history-list"></ul>
+    </div>
+
+    <script src="func.js"></script>
+  </body>
+</html>
